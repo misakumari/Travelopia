@@ -1,5 +1,5 @@
 # Created two files: Form Page and Details page
-### Using html and css for styling the page open the file Form.html
+### Using html and css for styling the page open the file Form.html and run:
 
 Adding screenshots:
 ![travel](https://github.com/misakumari/Travelopia/assets/50099748/d01626b0-7a4f-48ec-b59e-7503e76ab0b5)
