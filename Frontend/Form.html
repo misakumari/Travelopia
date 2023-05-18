@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg"></div>
+  <h2 align="center">Travel form </h2>
+    <h2 align="center">Please fill the correct details</h2>
+  <form id="myForm">
+        <table align="center" class="hello">
+            <tr><td>
+        <label for="name" class="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name" required>
+            <br>
+            </td></tr>
+            <tr><td>
+        <label for="email" class="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br>
+        </td></tr>
+        <tr><td>
+        <label for="destination" class="destination">Where do you want to go?</label><br>
+        <select id="destination" name="destination" required>
+          <option value="">Select destination</option>
+          <option value="India">India</option>
+          <option value="Africa">Africa</option>
+          <option value="Europe">Europe</option>
+        </select>
+        <br>
+        </td></tr>
+        <tr><td>
+        <label for="travelers" class="travelers">No. of travelers:</label><br>
+        <input type="number" id="travelers" name="travelers" required>
+        <br>
+        </td></tr>
+        <tr><td>
+        <label for="budget" class="budget">Budget Per Person (in dollars):</label><br>
+        <input type="number" id="budget" name="budget" required>
+        <br>
+        </td></tr>
+        <tr><td>
+        <input type="submit" value="Submit" class="button"><br>
+        </td></tr>
+        </table>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Get form values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var destination = document.getElementById("destination").value;
+      var travelers = document.getElementById("travelers").value;
+      var budget = document.getElementById("budget").value;
+      // Save form values to local storage
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("destination", destination);
+      localStorage.setItem("travelers", travelers);
+      localStorage.setItem("budget", budget);
+      // Redirect to the details page
+      window.location.href = "Details.html";
+    });
+  </script>
+</body>
+</html>
